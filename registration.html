@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechVolution 2024 Registration</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  <style>
+    /* Add custom styles here */
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+    <div class="container">
+      <a class="navbar-brand" href="#">TechVolution 2024</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="Main site page.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="About.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="features.html">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="testimonials.html">Testimonials</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="events.html">Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="gallery.html">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="registration.html">Registration</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="prizes.html">Prizes</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+
+  <div class="container">
+    <h2 class="mt-5">TechVolution 2024 Registration Form</h2>
+    <form id="registrationForm">
+      <!-- Personal Information -->
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" class="form-control" id="name" required>
+        <div class="invalid-feedback">Please enter your name.</div>
+      </div>
+      <div class="form-group">
+        <label for="dob">Date of Birth:</label>
+        <input type="date" class="form-control" id="dob" required>
+        <div class="invalid-feedback">Please enter your date of birth.</div>
+      </div>
+      <div class="form-group">
+        <label>Gender:</label>
+        <div class="form-check">
+          <input type="radio" class="form-check-input" id="male" name="gender" value="male" required>
+          <label class="form-check-label" for="male">Male</label>
+        </div>
+        <div class="form-check">
+          <input type="radio" class="form-check-input" id="female" name="gender" value="female">
+          <label class="form-check-label" for="female">Female</label>
+        </div>
+        <div class="form-check">
+          <input type="radio" class="form-check-input" id="nonBinary" name="gender" value="nonBinary">
+          <label class="form-check-label" for="nonBinary">Non-binary</label>
+        </div>
+      </div>
+      <!-- Contact Details -->
+      <div class="form-group">
+        <label for="email">Email Address:</label>
+        <input type="email" class="form-control" id="email" required>
+        <div class="invalid-feedback">Please enter a valid email address.</div>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number:</label>
+        <input type="text" class="form-control" id="phone" required>
+        <div class="invalid-feedback">Please enter your phone number.</div>
+      </div>
+      <div class="form-group">
+        <label>Address:</label>
+        <input type="text" class="form-control" id="streetAddress" placeholder="Street Address" required>
+        <input type="text" class="form-control" id="city" placeholder="City" required>
+        <select class="form-control" id="state" required>
+          <option value="">Select State</option>
+          <!-- Add options for states here -->
+        </select>
+        <input type="text" class="form-control" id="zipCode" placeholder="Zip Code" required>
+      </div>
+      <!-- Additional Information -->
+      <div class="form-group">
+        <label>Event Preferences:</label>
+        <select class="form-control" id="eventPreferences" multiple>
+          <!-- Add options for event preferences here -->
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="dietaryRestrictions">Dietary Restrictions:</label>
+        <textarea class="form-control" id="dietaryRestrictions" rows="3"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="tshirtSize">T-shirt Size:</label>
+        <select class="form-control" id="tshirtSize">
+          <!-- Add options for T-shirt sizes here -->
+        </select>
+      </div>
+      <!-- Submit Button -->
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+
+  <!-- Bootstrap JS and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Custom JavaScript -->
+  <script>
+    // Form validation
+    (function() {
+      'use strict';
+      window.addEventListener('load', function() {
+        var form = document.getElementById('registrationForm');
+        form.addEventListener('submit', function(event) {
+          if (!form.checkValidity()) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+          form.classList.add('was-validated');
+        }, false);
+      }, false);
+    })();
+  </script>
+
+<div class="container">
+  <footer class="row row-cols-1  row-cols-md-5 py-5 my-5 border-top  bg-dark text-white">
+    <div class="col mb-3">
+      <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
+        <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+      </a>
+      <p class="text-body-secondary">TechVolution 2024</p>
+
+      <div class="contact-block">   
+        <h3 class="contact-block-title">Call us?</h3>
+        <p class="call_us"><a href="tel:XXXX99999">XXXXX99999</a></p>
+       </div>
+       <div class="contact-block">
+        <h3 class="contact-block-title">Email us?</h3>
+        <p class="email_us">
+          <a href="example@gmail.com">example@gmail.com</a><br>
+          <a href="example@gmail.com">example@gmail.com</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="col mb-3">
+      <div class="contact-block">
+        <h2 class="contact-block-title">Address</h2>
+        <p class="address_details"></p><p>TechVolution Management Ltd | example | address |Company Number: XXXXX99999</p>
+
+      </div>
+    </div>
+  
+      
+  
+      <div class="col mb-3">
+        <h5>Section</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="event site.html" class="nav-link p-0 text-body-secondary">Home</a></li>
+          <li class="nav-item mb-2"><a href="features.html" class="nav-link p-0 text-body-secondary">Features</a></li>
+          <li class="nav-item mb-2"><a href="prize.html" class="nav-link p-0 text-body-secondary">Prizes</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+          <li class="nav-item mb-2"><a href="About.html" class="nav-link p-0 text-body-secondary">About</a></li>
+        </ul>
+      </div>
+  
+  
+    </footer>
+
+  </div>
+</body>
+</html>
